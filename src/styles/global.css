@@ -1,0 +1,260 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* =============================
+   🌐 GLOBAL STYLE (Umum)
+============================= */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #0b0f19, #05060a 80%);
+  color: #e2e8f0;
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#__next {
+  min-height: 100vh;
+  background: inherit; /* pastikan wrapper Next.js ikut background */
+}
+
+/* =============================
+   🧭 HEADER
+============================= */
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #111827, #1e1b4b);
+  color: #f1f5f9;
+  padding: 14px 36px;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.header-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.title-system {
+  color: #818cf8; /* Indigo Accent */
+}
+
+.title-panel {
+  color: #94a3b8; /* Slate Gray Soft */
+}
+
+/* =============================
+    🌐 LOGIN PAGE SPECIFIC STYLES
+============================= */
+
+/* Wrapper to center the content vertically and horizontally */
+.center-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card container for the login form */
+.card-login {
+  background: rgba(15, 23, 42, 0.7); /* Slate-900 with transparency */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(99, 102, 241, 0.2); /* Indigo border subtle */
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(99, 102, 241, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Glass-effect input field */
+.input-glass {
+  width: 100%;
+  padding: 12px 18px;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 8px;
+  background: rgba(30, 41, 59, 0.8); /* Darker background with transparency */
+  color: #e2e8f0;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.input-glass::placeholder {
+  color: #94a3b8; /* Slate-400 */
+}
+
+.input-glass:focus {
+  border-color: #818cf8; /* Focus border color */
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  background: #1e293b; /* Solid on focus */
+}
+
+/* Glow button for submission */
+.btn-glow {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  border: none;
+  /* Glowing background gradient */
+  background: linear-gradient(
+    90deg,
+    #6366f1 0%,
+    #8b5cf6 100%
+  ); /* Indigo to Violet */
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.btn-glow:hover:not(:disabled) {
+  background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 100%);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+  transform: translateY(-1px);
+}
+
+.btn-glow:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.btn-glow:disabled {
+  background: #374151; /* Darker gray for disabled state */
+  color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Simple fade-in animation for mounting */
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =============================
+   👤 AVATAR & PROFILE AREA
+============================= */
+.avatar {
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  color: white;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+}
+
+/* =============================
+   🧩 SIDEBAR
+============================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background: linear-gradient(180deg, #0f172a, #1e293b);
+  border-right: 1px solid rgba(99, 102, 241, 0.2);
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #818cf8;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Menu items */
+.sidebar nav button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  background: none;
+  border: none;
+  color: #cbd5e1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.sidebar nav button:hover {
+  background: rgba(99, 102, 241, 0.1);
+  color: #ffffff;
+}
+
+.sidebar nav button.active {
+  background: rgba(99, 102, 241, 0.2);
+  color: #818cf8;
+  font-weight: 600;
+}
+
+/* Logout button */
+.sidebar .logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-weight: 500;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.sidebar .logout:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+}

@@ -1,0 +1,232 @@
+/* =============================== */
+/* USER MANAGEMENT PAGE STYLING    */
+/* =============================== */
+
+.user-page {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* =============================== */
+/* HEADER SECTION                  */
+/* =============================== */
+.user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-header h3 {
+  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.user-button-add {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  color: white;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
+}
+
+.user-button-add:hover {
+  background: linear-gradient(90deg, #6366f1, #818cf8);
+  transform: translateY(-1px);
+}
+
+/* =============================== */
+/* TABLE STYLING                   */
+/* =============================== */
+.user-table-container {
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #d1d5db;
+}
+
+.user-table thead {
+  background: #1f2937;
+  color: #9ca3af;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.user-table th,
+.user-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.user-table tbody tr {
+  border-bottom: 1px solid #1f2937;
+  transition: background 0.2s ease;
+}
+
+.user-table tbody tr:hover {
+  background: rgba(55, 65, 81, 0.4);
+}
+
+.user-table td:last-child {
+  text-align: right;
+}
+
+/* =============================== */
+/* BUTTON ACTIONS (EDIT & DELETE)  */
+/* =============================== */
+.user-action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.user-action-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Edit button */
+.user-btn-edit {
+  color: #818cf8;
+}
+
+.user-btn-edit:hover {
+  color: #a5b4fc;
+}
+
+/* Delete button */
+.user-btn-delete {
+  color: #f87171;
+}
+
+.user-btn-delete:hover {
+  color: #fca5a5;
+}
+
+/* =============================== */
+/* MODAL OVERLAY                   */
+/* =============================== */
+.user-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  padding: 1rem;
+}
+
+/* =============================== */
+/* MODAL CONTAINER                 */
+/* =============================== */
+.user-modal {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 0 30px rgba(17, 24, 39, 0.7);
+  animation: fadeInScale 0.25s ease;
+}
+
+/* =============================== */
+/* FORM INPUT STYLING              */
+/* =============================== */
+.user-modal label {
+  display: block;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.user-modal input,
+.user-modal select {
+  width: 100%;
+  background: #111827;
+  color: white;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-modal input:focus,
+.user-modal select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.4);
+}
+
+/* =============================== */
+/* MODAL BUTTONS                   */
+/* =============================== */
+.user-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.user-btn-cancel {
+  background: #374151;
+  color: #d1d5db;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.user-btn-cancel:hover {
+  background: #4b5563;
+}
+
+.user-btn-save {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.user-btn-save:hover {
+  background: #6366f1;
+  transform: translateY(-1px);
+}
+
+/* =============================== */
+/* ANIMATION                       */
+/* =============================== */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

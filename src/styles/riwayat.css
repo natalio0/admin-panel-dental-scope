@@ -1,0 +1,145 @@
+/* =============================== */
+/* RIWAYAT DIAGNOSIS PAGE STYLING  */
+/* =============================== */
+
+.riwayat-page {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: #d1d5db;
+}
+
+/* =============================== */
+/* HEADER SECTION                  */
+/* =============================== */
+.riwayat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.riwayat-header h3 {
+  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* =============================== */
+/* TABLE CONTAINER                 */
+/* =============================== */
+.riwayat-table-container {
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* =============================== */
+/* TABLE STYLING                   */
+/* =============================== */
+.riwayat-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #d1d5db;
+}
+
+.riwayat-table thead {
+  background: #1f2937;
+  color: #9ca3af;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.riwayat-table th,
+.riwayat-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.riwayat-table tbody tr {
+  border-bottom: 1px solid #1f2937;
+  transition: background 0.2s ease;
+}
+
+.riwayat-table tbody tr:hover {
+  background: rgba(55, 65, 81, 0.4);
+}
+
+/* =============================== */
+/* TABLE CONTENT DETAILS           */
+/* =============================== */
+.riwayat-table td ul {
+  list-style-type: disc;
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+  color: #cbd5e1;
+}
+
+.riwayat-table td li {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+/* =============================== */
+/* LOADING SECTION                 */
+/* =============================== */
+.riwayat-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #d1d5db;
+  font-size: 1rem;
+  gap: 0.5rem;
+}
+
+/* =============================== */
+/* EMPTY STATE TEXT                */
+/* =============================== */
+.riwayat-empty {
+  text-align: center;
+  color: #9ca3af;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+/* =============================== */
+/* ANIMATION                       */
+/* =============================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.riwayat-table tbody tr {
+  animation: fadeIn 0.25s ease;
+}
+
+/* =============================== */
+/* RESPONSIVE                      */
+/* =============================== */
+@media (max-width: 768px) {
+  .riwayat-page {
+    padding: 1rem;
+  }
+
+  .riwayat-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .riwayat-table {
+    font-size: 0.85rem;
+    min-width: 700px;
+  }
+}
